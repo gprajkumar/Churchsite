@@ -1,0 +1,14 @@
+.example-form {
+  
+    width: 100%;
+  }
+  
+  .example-full-width {
+    width: 100%;
+  }
+  table{
+    width: 100%;
+   }
+   .customWidthClass{
+    flex: 0 0 75px;
+ }

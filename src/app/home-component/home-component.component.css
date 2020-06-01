@@ -1,0 +1,30 @@
+::ng-deep .carousel-item {
+    display: block !important;
+    z-index: 1;
+    position: absolute;
+    transition: opacity 1.5s ease-in-out, visibility 1s;
+    opacity: 0;
+    visibility: hidden;
+ 
+}
+::ng-deep .carousel-item.active {
+    position: relative;
+    transition: opacity 1.5s ease-in-out, visibility 1s;
+    visibility: visible;
+    opacity: 1;
+
+}
+.imagebox-desc {
+    background-color: rgba(0, 0, 0, 0.6);
+    bottom: 10px;
+    color: white;
+    font-size: 1.5em;
+    left: 0px;
+    padding: 4px;
+    border-radius: 4px;
+    position: absolute;
+    transition: 0.5s padding;
+    text-align: center;
+    width: 100%;
+  }
+  

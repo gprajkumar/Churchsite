@@ -1,0 +1,78 @@
+.red {
+    color: #229954 !important;
+  }
+  
+  footer {
+    background-color: #000000;
+    padding: 80px 0;
+    margin-top: 20px;
+  }
+  footer .footer-widget h3 {
+    margin-bottom: 30px;
+  }
+  footer .contact-link {
+    display: inline-block;
+    width: 100%;
+    color: rgb(255, 255, 255);
+  }
+  footer .footer-social ul {
+    padding-left: 0;
+  }
+  footer .footer-social ul li {
+    list-style: none;
+    float: left;
+    padding: 0 10px;
+  }
+  footer .footer-social ul li:first-child {
+    padding-left: 0;
+  }
+  footer .footer-social ul li a {
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+  }
+  footer .footer-social ul li a:hover {
+    color: #229954;
+  }
+  footer .opening-time {
+    padding-left: 0;
+  }
+  footer .opening-time li {
+    list-style: none;
+  }
+  footer .opening-time li span {
+    float: left;
+    padding-right: 10px;
+  }
+  footer .opening-time li span .fa-times {
+    color: #229954;
+  }
+  footer .opening-time li strong {
+    color: #229954;
+  }
+  
+  footer .media-body a {
+    color: rgb(255, 255, 255);
+  }
+  footer .media-body a:hover {
+    color: #229954;
+  }
+  footer .media-body span {
+    color: #ffffff;
+  }
+  footer .images-gellary ul {
+    padding-left: 0;
+  }
+  footer .images-gellary ul li {
+    list-style: none;
+    float: left;
+    margin: 0 3% 2% 0;
+    width: 31%;
+    position: relative;
+  }
+  footer .images-gellary ul li:nth-child(3n) {
+    margin: 0 0 1%;
+  }
+  .footer-widget
+  {
+    color: white;
+  }
