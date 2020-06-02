@@ -5,9 +5,8 @@
 @import "~animate.css/animate.min";
 @import 'https://fonts.googleapis.com/icon?family=Material+Icons';
 
+
 body{
-
-
 box-shadow: 10;
 }
 html, body { height: 100%; }

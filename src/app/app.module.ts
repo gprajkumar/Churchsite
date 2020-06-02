@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { CarouselModule } from 'ngx-owl-carousel-o';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -22,7 +22,8 @@ import { UpcomingEventsComponent } from './upcoming-events/upcoming-events.compo
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyMaterialModule} from './my-material/my-material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-import { LoadingSpinnerComponent } from './admin/loading-spinner/loading-spinner.component'
+import { LoadingSpinnerComponent } from './admin/loading-spinner/loading-spinner.component';
+import { UpcomingeventsComponent } from './upcomingevents/upcomingevents.component'
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { LoadingSpinnerComponent } from './admin/loading-spinner/loading-spinner
     AboutComponent,
     ContactComponent,
     UpcomingEventsComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    UpcomingeventsComponent
   
 
   
@@ -46,6 +48,7 @@ import { LoadingSpinnerComponent } from './admin/loading-spinner/loading-spinner
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    CarouselModule,
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireDatabaseModule,
@@ -67,7 +70,8 @@ import { LoadingSpinnerComponent } from './admin/loading-spinner/loading-spinner
     ]),
    
     MyMaterialModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+ 
 
   ],
   providers: [],
