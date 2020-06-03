@@ -1,6 +1,7 @@
 
 <div class="animated">
   <!-- <app-loading-spinner *ngif="true"></app-loading-spinner> -->
+  <p>{{language}}</p>
   <mat-progress-bar mode="indeterminate" *ngIf="showspinner"></mat-progress-bar>
 <ngb-carousel class="img-fluid"  #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
     <ng-template ngbSlide *ngFor="let img of imageList?.slice().reverse()">

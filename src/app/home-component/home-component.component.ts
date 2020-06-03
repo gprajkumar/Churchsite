@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { NgbCarouselConfig, NgbCarousel, NgbSlideEvent, NgbSlideEventSource } from '@ng-bootstrap/ng-bootstrap';
 import { AngularFireDatabase, AngularFireList } from '@angular/fire/database';
+import { ShareddataService } from '../shareddata.service';
 
 @Component({
   selector: 'app-home-component',
@@ -13,7 +14,7 @@ showspinner:boolean=true;
   imageDetailList: AngularFireList<any>;
   imageList: any[];
   images = [0,1,2,3,4].map((n) => `assets/Vakuthatham/${n}.jpg`);
-
+language:string='English';
   paused = false;
   unpauseOnArrow = false;
   pauseOnIndicator = false;
@@ -41,10 +42,10 @@ showspinner:boolean=true;
       this.togglePaused();
     }
   }
-  constructor(private firebase: AngularFireDatabase ) { }
+  constructor(private firebase: AngularFireDatabase,private sharedata:ShareddataService ) { }
   getImageDetailList() {
     this.imageDetailList = this.firebase.list('Vakkuthatham');
-    
+   
   }
 
 
@@ -61,8 +62,9 @@ showspinner:boolean=true;
       }
    
     );
-    
+    this.sharedata.OnLanguageChange.subscribe(value=>this.language=value)
   }
+
   
 
 }

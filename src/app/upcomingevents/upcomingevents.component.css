@@ -1,5 +1,7 @@
 .example-card {
-    max-width: 400px;
+    max-width: 300px;
+    padding: 2px;
+    margin: 2px;
   }
   
   .example-header-image {
@@ -7,13 +9,6 @@
     background-size: cover;
   }
 
-  .scrolling-wrapper {
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-}
-.scrolling-wrapper .card {
-    display: inline-block;
-}
+  
 
   
