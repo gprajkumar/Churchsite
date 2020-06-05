@@ -4,16 +4,18 @@
   <p>{{language}}</p>
   <mat-progress-bar mode="indeterminate" *ngIf="showspinner"></mat-progress-bar>
 <ngb-carousel class="img-fluid"  #carousel [interval]="5000" [pauseOnHover]="pauseOnHover" (slide)="onSlide($event)">
-    <ng-template ngbSlide *ngFor="let img of imageList?.slice().reverse()">
-      <div class="carousel-caption" style="text-align: bottom;">
+    <ng-template ngbSlide *ngFor="let img of imageList?.slice().reverse()" >
+      <div class="carousel-caption" *ngIf="condition" style="text-align: bottom;">
         <p ><span class="imagebox-desc">{{img.caption}}</span></p>
       </div>
-     
+      <div class="carousel-caption" *ngIf="!condition" style="text-align: bottom;">
+        <p ><span class="imagebox-desc">{{img.tacaption}}</span></p>
+      </div>
         <div class="picsum-img-wrapper">
           <img [src]="img.imageUrl"  alt="Loading" style="width: 100%;max-height: 80VH">
         </div>
    
-      
+    
       
     </ng-template>
   </ngb-carousel>

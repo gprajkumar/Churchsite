@@ -21,6 +21,7 @@ language:string='English';
   pauseOnHover = true;
   showNavigationArrows=true;
   showNavigationIndicators=true;
+  condition:boolean=true;
 
   @ViewChild('carousel', {static : true}) carousel: NgbCarousel;
 
@@ -50,7 +51,19 @@ language:string='English';
 
 
   ngOnInit(): void {
-    
+    this.sharedata.OnLanguageChange.subscribe(value=>{
+      
+      this.language=value;
+    if(value=='தமிழ்')
+    {
+      this.condition=false;
+    }
+    else
+    {
+      this.condition=true;
+    }
+    })
+  
     
     this.getImageDetailList();
     this.imageDetailList.snapshotChanges().subscribe(
@@ -62,7 +75,7 @@ language:string='English';
       }
    
     );
-    this.sharedata.OnLanguageChange.subscribe(value=>this.language=value)
+  
   }
 
   

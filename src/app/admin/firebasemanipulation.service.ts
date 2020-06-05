@@ -21,4 +21,8 @@ export class FirebasemanipulationService {
   deleteEmployee($key: string) {
     this.carauseldatalist.remove($key);
   }
+  updatecarausel(key:string,imageDetails)
+  {
+    this.firebase.list('/Vakkuthatham').update(key,imageDetails);
+  }
 }
