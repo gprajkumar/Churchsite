@@ -6,6 +6,7 @@ import { finalize, combineAll } from "rxjs/operators";
 import { FirebasemanipulationService } from '../firebasemanipulation.service';
 import {MatTableDataSource} from '@angular/material/table';
 import { Observable } from 'rxjs';
+import { DialogserviceService } from '../../dialogservice.service';
 
 @Component({
   selector: 'app-upload-image',
@@ -28,7 +29,8 @@ export class UploadImageComponent implements OnInit {
     tacaption: new FormControl('', Validators.required),
     imageUrl: new FormControl('', Validators.required)
   })
-  constructor(private storage: AngularFireStorage,private firebase: AngularFireDatabase,private dataservice:FirebasemanipulationService) { }
+  constructor(private storage: AngularFireStorage,private firebase: AngularFireDatabase,private dataservice:FirebasemanipulationService,
+    private dialogService: DialogserviceService) { }
 
   ngOnInit(): void {
     this.dataservice.getcaraouseldatadetails().subscribe(
@@ -88,7 +90,13 @@ export class UploadImageComponent implements OnInit {
   }
   showDeleteModal(row) {
   
-    this.dataservice.deleteEmployee(row.key);
+    this.dialogService.openConfirmDialog('Are you sure to delete this record ?')
+    .afterClosed().subscribe(res =>{
+      if(res){
+        this.dataservice.deleteEmployee(row.key);
+      }
+    });
+  
  }
  showEditmodal(row)
  {

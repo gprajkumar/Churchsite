@@ -23,7 +23,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MyMaterialModule} from './my-material/my-material.module';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { LoadingSpinnerComponent } from './admin/loading-spinner/loading-spinner.component';
-import { UpcomingeventsComponent } from './upcomingevents/upcomingevents.component'
+import { UpcomingeventsComponent } from './upcomingevents/upcomingevents.component';
+import { MatDialogboxComponent } from './mat-dialogbox/mat-dialogbox.component'
 
 
 @NgModule({
@@ -40,7 +41,8 @@ import { UpcomingeventsComponent } from './upcomingevents/upcomingevents.compone
     ContactComponent,
     UpcomingEventsComponent,
     LoadingSpinnerComponent,
-    UpcomingeventsComponent
+    UpcomingeventsComponent,
+    MatDialogboxComponent
   
 
   
@@ -75,6 +77,7 @@ import { UpcomingeventsComponent } from './upcomingevents/upcomingevents.compone
 
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents:[MatDialogboxComponent]
 })
 export class AppModule { }
